@@ -18,8 +18,20 @@ const FilterMenuScreen = ({ route, navigation }: any) => {
             <FlatList 
             data={filterItems}
             keyExtractor={(item) => item.id}
-            renderItem={()}
-
+            renderItem={({ item }) => (
+                <View style={ styles.menuItem}>
+                    <Text>{item.name} - R{item.price}</Text>
+                </View>
+            )}
+            />
         </View>
-    )
-}
+    );
+};
+
+const styles = StyleSheet.create({
+    container: {flex: 1, padding: 20, backgroundColor: '#f0f8ff'},
+    title: { fontSize: 24, fontWeight: 'bold',marginBottom:10 },
+    menuItem: {padding: 10, borderBottomWidth: 1, borderBottomColor:'#ccc'},
+});
+
+export default FilterMenuScreen;
