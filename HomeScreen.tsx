@@ -40,20 +40,22 @@ const HomeScreen = ({ navigation }: any) => {
                     
                     <TouchableOpacity
                     style={styles.removeButton}
-                    onPress={() => removeMenuItem}>Remove</TouchableOpacity>
+                    onPress={() => removeMenuItem(item.id)}>
+                    <Text style={styles.removeButtonText}>Remove</Text>
+                    </TouchableOpacity>
                     </View>
             )}
             />
 
-            <Button
-            title="Add Menu"
-            onPress={() => navigation.navigate('AddMenuItem', { setMenuItems, menuItems})}
-            />
+           <Button
+           title="Add Menu"
+           onPress={() => navigation.navigate('AddMenuItem', {menuItems, setMenuItems })}
+           />
+
             <Button
             title="Filter Menu" 
-            onPress={() => navigation.navigate ('FilterMenu', { menuItems})}
+            onPress={() => navigation.navigate('FilterMenu', { menuItems })}
             />
-
         </View>
     );
 };

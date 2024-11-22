@@ -34,13 +34,18 @@ const AddMenuItemScreen = ({ route, navigation }: any) => {
             <TextInput style={styles.input} value={name} onChangeText={setName} placeholder="Enter dish name"/>
 
             <Text style={styles.label}>Description</Text>
-            <TextInput style={styles.input} value={name} onChangeText={setDescription} placeholder="Enter description"/>
+            <TextInput style={styles.input} value={description} onChangeText={setDescription} placeholder="Enter description"/>
 
             <Text style={styles.label}>Course</Text>
-            <TextInput style={styles.input} value={name} onChangeText={setCourse} placeholder="Enter type of course"/>
+            <TextInput style={styles.input} value={course} onChangeText={setCourse} placeholder="Enter type of course"/>
 
             <Text style={styles.label}>Price</Text>
-            <TextInput style={styles.input} value={name} onChangeText={setPrice} placeholder="Enter price" keyboardType="numeric"/>
+            <TextInput 
+            style={styles.input} 
+            value={price} 
+            onChangeText={setPrice} 
+            placeholder="Enter price" 
+            keyboardType="numeric"/>
 
         <Button title="Add Item" onPress={AddMenuItem}/>
         </View>
