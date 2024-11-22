@@ -30,3 +30,7 @@ Fix:
 
 .I added TypeScript type declarations for navigation routes using RootStackParamList.
 .I Defined the MenuItem type for improved clarity and type safety.
+
+
+https://github.com/user-attachments/assets/89659392-9779-42bc-ac5d-d0214e5aa1eb
+
